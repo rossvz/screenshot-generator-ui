@@ -1,0 +1,8 @@
+{
+  "name": "screenshot-generator-ui",
+  "alias": "screenshot-generator-ui.now.sh",
+  "type":"static",
+  "static":{
+    "public":"build"
+  }
+}
