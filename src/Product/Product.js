@@ -98,7 +98,7 @@ const styles = {
   name: {
     fontSize: '4em',
     color: '#2d3436',
-    fontFamily: 'Nunito Sans Black'
+    fontWeight: 900
   },
   price: {
     fontSize: '3em',
