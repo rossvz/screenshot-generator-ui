@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { apiClient } from '../apiClient'
+import { Featured } from './Featured'
 
 class Product extends Component {
   constructor() {
@@ -52,14 +53,17 @@ class Product extends Component {
   render() {
     const { product } = this.state
     return product ? (
-      <div id={'product'} style={styles.container}>
-        <div style={styles.imageContainer}>
-          <img style={styles.image} src={product.image.lg} alt="" />
-        </div>
-        <div style={styles.info}>
-          <h1 style={styles.name}>{product.name}</h1>
-          {this.findPrice(product.properties)}
-          <div style={styles.size}>{this.findSize(product.properties)}</div>
+      <div>
+        <Featured />
+        <div id={'product'} style={styles.container}>
+          <div style={styles.imageContainer}>
+            <img style={styles.image} src={product.image.lg} alt="" />
+          </div>
+          <div style={styles.info}>
+            <h1 style={styles.name}>{product.name}</h1>
+            {this.findPrice(product.properties)}
+            <div style={styles.size}>{this.findSize(product.properties)}</div>
+          </div>
         </div>
       </div>
     ) : (
