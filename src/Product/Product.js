@@ -53,7 +53,7 @@ class Product extends Component {
   render() {
     const { product } = this.state
     return product ? (
-      <div>
+      <>
         <Featured />
         <div id={'product'} style={styles.container}>
           <div style={styles.imageContainer}>
@@ -65,7 +65,7 @@ class Product extends Component {
             <div style={styles.size}>{this.findSize(product.properties)}</div>
           </div>
         </div>
-      </div>
+      </>
     ) : (
       <div id={'loading'}>Loading</div>
     )
@@ -79,14 +79,18 @@ const styles = {
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'space-between',
-    maxHeight: '100vh'
+    height: '100vh',
+    width: '100vw'
   },
   imageContainer: {
     flex: 1,
-    padding: '5%'
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   image: {
-    height: '100%'
+    maxHeight: '90vh',
+    width: 'auto'
   },
   info: {
     flex: 3,
