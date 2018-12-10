@@ -1,8 +1,12 @@
 {
+  "version": 2,
   "name": "screenshot-generator-ui",
-  "alias": "screenshot-generator-ui.now.sh",
-  "type":"static",
-  "static":{
-    "public":"build"
-  }
+  "builds": [
+    {"src":  "package.json", "use":  "@now/static-build"}
+  ],
+  "env": {
+    "REACT_APP_REFRESH_TOKEN": "@refresh-token",
+    "REACT_APP_API_URL": "https://api.sllr.io"
+  },
+  "alias": "screenshot-generator-ui.now.sh"
 }
