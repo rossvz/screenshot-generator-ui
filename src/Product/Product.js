@@ -86,7 +86,8 @@ const styles = {
     flex: 1,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: '5%'
   },
   image: {
     maxHeight: '90vh',
