@@ -1,24 +1,24 @@
 body {
-    font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .featured-container {
-    position: absolute;
-    top:0;
-    right: 0;
-    width: 250px;
-    border-style: solid;
-    border-width: 0 250px 250px 0;
-    border-color: transparent #2c3e50 transparent transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 275px;
+  border-style: solid;
+  border-width: 0 275px 275px 0;
+  border-color: transparent #2c3e50 transparent transparent;
 }
 
 .featured {
-    font-size: 2.3em;
-    color: white;
-    position: absolute;
-    top: 65px;
-    right: -258px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    font-weight: bold;
+  font-size: 2.3em;
+  color: white;
+  position: absolute;
+  top: 93px;
+  right: -257px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  font-weight: bold;
 }

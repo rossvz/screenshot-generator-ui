@@ -50,6 +50,12 @@ class Product extends Component {
     return null
   }
 
+  findNotes = props => {
+    const notes = props.filter(this.specificProp('storeNotes'))
+    if (notes.length) return `${notes[0].value}`
+    return null
+  }
+
   render() {
     const { product } = this.state
     return product ? (
@@ -63,6 +69,7 @@ class Product extends Component {
             <h1 style={styles.name}>{product.name}</h1>
             {this.findPrice(product.properties)}
             <div style={styles.size}>{this.findSize(product.properties)}</div>
+            <div style={styles.notes}>{this.findNotes(product.properties)}</div>
           </div>
         </div>
       </>
@@ -103,7 +110,8 @@ const styles = {
   name: {
     fontSize: '4em',
     color: '#2d3436',
-    fontWeight: 900
+    fontWeight: 900,
+    paddingRight: '10%'
   },
   price: {
     fontSize: '3em',
@@ -121,6 +129,12 @@ const styles = {
     fontSize: '3em',
     color: '#2d3436',
     fontWeight: 300
+  },
+  notes: {
+    fontSize: '2em',
+    color: '#2d3436',
+    fontWeight: 300,
+    paddingRight: '10%'
   }
 }
 
