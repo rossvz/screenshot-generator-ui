@@ -17,7 +17,7 @@
     "eject": "react-scripts eject",
     "now-start": "serve -s build",
     "now-build": "react-scripts build && mv build dist",
-    "deploy": "now && now alias"
+    "deploy": "now --target=production"
   },
   "eslintConfig": {
     "extends": "react-app"
